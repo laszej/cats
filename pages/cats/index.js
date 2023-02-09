@@ -4,7 +4,7 @@ import Card from '../../components/Card/Card'
 import DefaultLayout from '../../layouts/Default'
 
 
-export default function index() {
+export default function Index() {
 
   const [cats, setCats] = useState([])
 
@@ -27,6 +27,7 @@ export default function index() {
     <div style={{display: "flex", flexWrap: "wrap"}}>
     {cats.map(cat=>
     <Card
+    key={cat.id}
     name={cat.name}
     id={cat.id}
     phone={cat.phone}
